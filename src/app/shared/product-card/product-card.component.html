@@ -1,0 +1,18 @@
+<article class="product-card" scrollReveal>
+  <div class="product-image-shell">
+    <img [src]="product().image" [alt]="product().name" class="product-image" />
+
+    <div class="product-badges">
+      @for (tag of product().tags; track tag) {
+        <span class="product-badge" [class.custom]="tag.includes('Custom')">{{ tag }}</span>
+      }
+    </div>
+  </div>
+
+  <div class="product-body">
+    <h3 class="product-title">{{ product().name }}</h3>
+    <div class="product-price">{{ product().price }}</div>
+    <div class="product-rating" aria-label="5 star rating">{{ '★'.repeat(product().stars) }}</div>
+    <button type="button" class="product-button">Shop Now</button>
+  </div>
+</article>

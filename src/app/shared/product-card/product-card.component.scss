@@ -1,0 +1,97 @@
+.product-card {
+  overflow: hidden;
+  border: 1px solid rgba(236, 72, 153, 0.08);
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(236, 72, 153, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 20px 56px rgba(236, 72, 153, 0.2);
+}
+
+.product-image-shell {
+  position: relative;
+  overflow: hidden;
+  height: 16.25rem;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+.product-badges {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.product-badge {
+  padding: 0.32rem 0.72rem;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  background: linear-gradient(135deg, var(--color-pink), var(--color-violet));
+}
+
+.product-badge.custom {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-soft));
+}
+
+.product-body {
+  padding: 1.35rem;
+}
+
+.product-title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-ink);
+}
+
+.product-price {
+  margin-bottom: 0.55rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-pink), var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.product-rating {
+  margin-bottom: 1rem;
+  color: var(--color-gold);
+  letter-spacing: 0.08rem;
+}
+
+.product-button {
+  width: 100%;
+  min-height: 3rem;
+  border: 0;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--color-pink), var(--color-violet));
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.3);
+}

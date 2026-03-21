@@ -1,0 +1,41 @@
+.section-shell {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 0.95rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.28rem;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.section-title {
+  max-width: 16ch;
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+
+.section-description {
+  max-width: 38rem;
+  margin: 0 0 3rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.narrow {
+  max-width: 20ch;
+}

@@ -1,0 +1,41 @@
+<app-header
+  eyebrow="✦ Our Story"
+  title="Crafted from the Heart, Worn with Pride"
+  subtitle="Sai Mayura Knots was born from a deep love for handcraft and feminine artistry."
+  theme="about"
+></app-header>
+
+<section class="about-page" scrollReveal="100ms">
+  <div class="container about-grid">
+    <div class="about-media" scrollReveal="160ms">
+      <div class="about-glow"></div>
+      <img src="assets/images/about-image.jpg" alt="Sai Mayura Knots artisan at work" />
+    </div>
+
+    <div class="about-copy" scrollReveal="220ms">
+      <span class="eyebrow">✦ Handcrafted Legacy</span>
+      <h2>A wearable story of dedication and beauty</h2>
+      <p>
+        Sai Mayura Knots was born from a deep love for handcraft and feminine artistry. Every
+        piece we create carries the warmth of our hands and the passion of our hearts — a
+        wearable story of dedication and beauty.
+      </p>
+      <p>
+        From intricate macrame bracelets to delicate beaded earrings, each accessory is lovingly
+        crafted using premium materials. We believe in slow fashion — made with intention, worn
+        with joy, and cherished for a lifetime.
+      </p>
+
+      <div class="stats-row">
+        @for (stat of stats; track stat.label) {
+          <article class="stat-card" scrollReveal>
+            <div class="stat-value">{{ stat.value }}</div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </article>
+        }
+      </div>
+
+      <a routerLink="/contact" class="cta-link">Start a Custom Order</a>
+    </div>
+  </div>
+</section>

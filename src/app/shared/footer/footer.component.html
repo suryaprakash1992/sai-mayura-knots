@@ -1,0 +1,53 @@
+<footer class="site-footer">
+  <div class="site-footer-bar"></div>
+
+  <div class="site-footer-inner container">
+    <div class="site-footer-grid">
+      <div class="site-footer-brand">
+        <div class="site-footer-logo">Sai Mayura Knots</div>
+        <p class="site-footer-copy">Handmade with love and care</p>
+
+        <div class="site-footer-socials">
+          @for (social of socialLinks; track social.label) {
+            <a
+              class="site-footer-social"
+              [href]="social.href"
+              target="_blank"
+              rel="noreferrer noopener"
+              [attr.aria-label]="social.label"
+            >
+              <span>{{ social.label.charAt(0) }}</span>
+            </a>
+          }
+        </div>
+      </div>
+
+      <div>
+        <h4 class="site-footer-heading">Shop</h4>
+        @for (item of navItems; track item.route) {
+          <a class="site-footer-link" [routerLink]="item.route">{{ item.label }}</a>
+        }
+      </div>
+
+      <div>
+        <h4 class="site-footer-heading">Company</h4>
+        <a class="site-footer-link" routerLink="/about">Our Story</a>
+        <a class="site-footer-link" routerLink="/contact">Contact</a>
+        <a class="site-footer-link" routerLink="/products">Custom Orders</a>
+        <a class="site-footer-link" routerLink="/testimonials">Customer Love</a>
+      </div>
+
+      <div>
+        <h4 class="site-footer-heading">Connect</h4>
+        <div class="site-footer-meta">📧 hello@saimayuraknots.com</div>
+        <div class="site-footer-meta">💬 WhatsApp: +91 99999 99999</div>
+        <div class="site-footer-meta">📸 @saimayuraknots</div>
+      </div>
+    </div>
+
+    <div class="site-footer-bottom">
+      <span>© {{ year }} Sai Mayura Knots. Made with love in India.</span>
+      <span>Handcrafted elegance for every occasion.</span>
+    </div>
+  </div>
+</footer>

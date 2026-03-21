@@ -1,0 +1,19 @@
+<div class="section-shell" scrollReveal>
+  @if (overline()) {
+    <span class="section-label" [ngClass]="{ centered: centered() }">{{ overline() }}</span>
+  }
+
+  @if (title()) {
+    <h2 class="section-title" [ngClass]="{ centered: centered(), narrow: narrow() }">
+      {{ title() }}
+    </h2>
+  }
+
+  @if (description()) {
+    <p class="section-description" [ngClass]="{ centered: centered(), narrow: narrow() }">
+      {{ description() }}
+    </p>
+  }
+
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,42 @@
+<nav class="site-nav" [ngClass]="{ scrolled: isScrolled() }">
+  <a class="site-logo" routerLink="/" (click)="closeMenu()">Sai Mayura Knots</a>
+
+  <ul class="site-nav-links">
+    @for (item of navItems; track item.route) {
+      <li>
+        <a
+          class="site-nav-link"
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+        >
+          {{ item.label }}
+        </a>
+      </li>
+    }
+  </ul>
+
+  <button
+    type="button"
+    class="site-hamburger"
+    [ngClass]="{ open: menuOpen() }"
+    aria-label="Toggle menu"
+    (click)="toggleMenu()"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" [ngClass]="{ open: menuOpen() }">
+  @for (item of navItems; track item.route) {
+    <a
+      class="mobile-menu-link"
+      [routerLink]="item.route"
+      (click)="closeMenu()"
+    >
+      {{ item.label }}
+    </a>
+  }
+</div>

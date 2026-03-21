@@ -1,0 +1,67 @@
+<app-header
+  eyebrow="✦ Reach Out"
+  title="Get in Touch"
+  subtitle="We'd love to hear from you about custom ideas, gifting, or your favorite piece from the collection."
+  theme="hero"
+></app-header>
+
+<section class="contact-page" scrollReveal="100ms">
+  <div class="container contact-grid">
+    <article class="contact-card" scrollReveal="160ms">
+      <span class="section-label">✦ Contact Form</span>
+      <h2>Send us a message</h2>
+      <p>Minimal enterprise-ready form wiring with strong typing and responsive layout.</p>
+
+      <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <label class="field">
+          <span>Your Name *</span>
+          <input type="text" formControlName="name" />
+        </label>
+
+        <label class="field">
+          <span>Email Address *</span>
+          <input type="email" formControlName="email" />
+        </label>
+
+        <label class="field">
+          <span>Phone Number</span>
+          <input type="tel" formControlName="phone" />
+        </label>
+
+        <label class="field">
+          <span>Your Message *</span>
+          <textarea rows="6" formControlName="message"></textarea>
+        </label>
+
+        <button type="submit" class="submit-button">Send Message ✦</button>
+
+        @if (submitted && contactForm.valid) {
+          <div class="form-state success">Message sent! We'll reply within 24 hours.</div>
+        }
+      </form>
+    </article>
+
+    <aside class="contact-info" scrollReveal="220ms">
+      <article class="info-card" scrollReveal="260ms">
+        <span class="section-label">✦ Direct Connect</span>
+        <h3>Let's create something beautiful together</h3>
+        <div class="info-line">📧 hello@saimayuraknots.com</div>
+        <div class="info-line">💬 WhatsApp: +91 99999 99999</div>
+        <div class="info-line">📍 India</div>
+      </article>
+
+      <article class="info-card" scrollReveal="320ms">
+        <span class="section-label">✦ Social Links</span>
+        <div class="social-list">
+          @for (social of socialLinks; track social.label) {
+            <a [href]="social.href" target="_blank" rel="noreferrer noopener">{{ social.label }}</a>
+          }
+        </div>
+      </article>
+
+      <a class="whatsapp-placeholder" href="https://wa.me/919999999999" scrollReveal="380ms">
+        WhatsApp Button Placeholder
+      </a>
+    </aside>
+  </div>
+</section>

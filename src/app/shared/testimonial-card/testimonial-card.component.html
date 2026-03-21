@@ -1,0 +1,16 @@
+<article class="testimonial-card" scrollReveal>
+  <div class="testimonial-quote-mark">“</div>
+  <p class="testimonial-copy">{{ testimonial().text }}</p>
+  <div class="testimonial-rating">★★★★★</div>
+
+  <div class="testimonial-footer">
+    <div class="testimonial-avatar" [class]="'testimonial-avatar avatar-' + testimonial().id">
+      {{ testimonial().initials }}
+    </div>
+
+    <div>
+      <div class="testimonial-name">{{ testimonial().name }}</div>
+      <div class="testimonial-tag">Verified Buyer</div>
+    </div>
+  </div>
+</article>

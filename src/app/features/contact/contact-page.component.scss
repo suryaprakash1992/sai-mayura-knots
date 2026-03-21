@@ -1,0 +1,129 @@
+.contact-page {
+  padding: 6.25rem 0;
+  background: linear-gradient(135deg, #fff0f7 0%, #fef3e8 100%);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-card,
+.info-card {
+  padding: 2.5rem;
+  border-radius: 2rem;
+  background: #fff;
+  box-shadow: 0 20px 64px rgba(236, 72, 153, 0.1);
+}
+
+.contact-card h2,
+.info-card h3 {
+  margin: 0 0 0.8rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-ink);
+}
+
+.contact-card p {
+  margin: 0 0 1.8rem;
+  color: var(--color-muted);
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--color-gold);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.28rem;
+  text-transform: uppercase;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field span {
+  color: #6f5661;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 1rem 1rem;
+  border: 1.5px solid #e8d5df;
+  border-radius: 0.9rem;
+  background: #fff;
+  color: var(--color-ink);
+  font: inherit;
+  outline: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--color-pink);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+.submit-button,
+.whatsapp-placeholder {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.25rem;
+  padding: 0.95rem 2rem;
+  border: 0;
+  border-radius: 0.9rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--color-pink), var(--color-violet));
+  cursor: pointer;
+}
+
+.form-state.success {
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  color: var(--color-pink);
+  text-align: center;
+  font-weight: 500;
+  background: rgba(236, 72, 153, 0.08);
+}
+
+.contact-info {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.info-line {
+  margin-bottom: 0.9rem;
+  color: #666;
+}
+
+.social-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.social-list a {
+  color: var(--color-pink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

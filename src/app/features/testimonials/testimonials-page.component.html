@@ -1,0 +1,21 @@
+<app-header
+  eyebrow="✦ Customer Love"
+  title="Voices of Elegance"
+  subtitle="Real stories from our beloved customers across India."
+  theme="hero"
+></app-header>
+
+<section class="testimonials-page" scrollReveal="100ms">
+  <app-section-container
+    overline="✦ Verified Reviews"
+    title="Loved for the details"
+    description="A responsive card grid inspired by the original testimonial carousel, adapted for routed browsing."
+    [centered]="true"
+  >
+    <div class="testimonial-grid">
+      @for (testimonial of testimonials; track testimonial.id) {
+        <app-testimonial-card [testimonial]="testimonial"></app-testimonial-card>
+      }
+    </div>
+  </app-section-container>
+</section>

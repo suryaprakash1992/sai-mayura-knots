@@ -1,0 +1,144 @@
+<app-header
+  eyebrow="✦ Handcrafted with Love"
+  title="Handcrafted Elegance for Every Occasion"
+  subtitle="Discover our exclusive collection of handmade accessories — each piece tells a story."
+  size="home"
+  theme="hero"
+  [actions]="heroActions"
+></app-header>
+
+<section class="page-section soft-pink" scrollReveal>
+  <app-section-container
+    overline="✦ New Arrivals"
+    title="Our Handcrafted Collection"
+    description="Every accessory is lovingly handcrafted with premium materials and artisanal precision."
+    [centered]="true"
+  >
+    <div class="product-grid">
+      @for (product of featuredProducts; track product.id) {
+        <app-product-card [product]="product"></app-product-card>
+      }
+    </div>
+  </app-section-container>
+</section>
+
+<section class="feature-banner-section soft-pink" scrollReveal="80ms">
+  <div class="container">
+    <article class="feature-banner">
+      <div class="feature-banner-glow feature-banner-glow-right"></div>
+      <div class="feature-banner-glow feature-banner-glow-left"></div>
+
+      <div class="feature-banner-copy">
+        <span class="banner-label">✦ Featured Collection</span>
+        <h2>The Artisan's Pride Collection</h2>
+        <p>
+          Our most celebrated pieces — each one a testament to the beauty of handcraft.
+          Limited edition, crafted to perfection.
+        </p>
+        <a routerLink="/products" class="banner-button">Explore Collection ✦</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="page-section soft-pink" scrollReveal="120ms">
+  <app-section-container
+    overline="✦ Customer Love"
+    title="Voices of Elegance"
+    description="Real stories from our beloved customers across India."
+    [centered]="true"
+  >
+    <div class="testimonial-grid">
+      @for (testimonial of testimonials; track testimonial.id) {
+        <app-testimonial-card [testimonial]="testimonial"></app-testimonial-card>
+      }
+    </div>
+    <div class="section-cta">
+      <a routerLink="/testimonials" class="ghost-link">View All Testimonials</a>
+    </div>
+  </app-section-container>
+</section>
+
+<section class="page-section custom-order" scrollReveal="160ms">
+  <div class="container">
+    <div class="custom-order-shell">
+      <app-section-container
+        overline="✦ Bespoke Creations"
+        title="Create Something Uniquely Yours"
+        description="Tell your idea → We craft → You shine"
+        [centered]="true"
+      >
+        <div class="step-grid">
+          @for (step of steps; track step.number) {
+            <article class="step-card">
+              <div class="step-icon">{{ step.icon }}</div>
+              <div class="step-number">Step {{ step.number }}</div>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.description }}</p>
+            </article>
+          }
+        </div>
+
+        <div class="section-cta">
+          <a routerLink="/contact" class="solid-link">Start Custom Order ✦</a>
+        </div>
+      </app-section-container>
+    </div>
+  </div>
+</section>
+
+<section class="page-section white" scrollReveal="200ms">
+  <div class="container about-preview">
+    <div class="about-preview-media">
+      <div class="about-preview-glow"></div>
+      <img src="assets/images/about-image.jpg" alt="Sai Mayura Knots artisan" />
+    </div>
+
+    <div class="about-preview-copy">
+      <span class="eyebrow">✦ Our Story</span>
+      <h2>
+        Crafted from the Heart,
+        <span>Worn with Pride</span>
+      </h2>
+      <p>
+        Sai Mayura Knots was born from a deep love for handcraft and feminine artistry.
+        Every piece we create carries the warmth of our hands and the passion of our hearts.
+      </p>
+      <p>
+        From intricate macrame bracelets to delicate beaded earrings, each accessory is lovingly
+        crafted using premium materials and intentional detail.
+      </p>
+
+      <div class="stats-row">
+        @for (stat of stats; track stat.label) {
+          <article class="stat-card">
+            <div class="stat-value">{{ stat.value }}</div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </article>
+        }
+      </div>
+
+      <a routerLink="/about" class="solid-link">Discover Our Story</a>
+    </div>
+  </div>
+</section>
+
+<section class="page-section contact-preview" scrollReveal="240ms">
+  <app-section-container
+    overline="✦ Reach Out"
+    title="Get in Touch"
+    description="We'd love to hear from you"
+    [centered]="true"
+  >
+    <div class="contact-preview-card">
+      <p>
+        Have a custom idea, gifting request, or question about the collection? Let's create
+        something beautiful together.
+      </p>
+      <div class="contact-preview-actions">
+        <a routerLink="/contact" class="solid-link">Open Contact Form</a>
+        <a href="https://wa.me/919999999999" class="ghost-link">WhatsApp Placeholder</a>
+      </div>
+    </div>
+  </app-section-container>
+</section>

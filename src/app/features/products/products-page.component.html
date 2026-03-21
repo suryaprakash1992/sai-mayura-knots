@@ -1,0 +1,21 @@
+<app-header
+  eyebrow="✦ New Arrivals"
+  title="Our Handcrafted Collection"
+  subtitle="Every accessory is lovingly handcrafted with premium materials and artisanal precision."
+  theme="hero"
+></app-header>
+
+<section class="products-page" scrollReveal="100ms">
+  <app-section-container
+    overline="✦ Signature Pieces"
+    title="Designed to be treasured"
+    description="Browse the complete collection of bracelets, scrunchies, earrings, and anklets inspired by the original showcase."
+    [centered]="true"
+  >
+    <div class="product-grid">
+      @for (product of products; track product.id) {
+        <app-product-card [product]="product"></app-product-card>
+      }
+    </div>
+  </app-section-container>
+</section>
