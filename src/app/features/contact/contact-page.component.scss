@@ -92,6 +92,13 @@
   cursor: pointer;
 }
 
+.whatsapp-placeholder svg,
+.contact-preview-actions .ghost-link svg {
+  width: 1.45rem;
+  height: 1.45rem;
+  display: block;
+}
+
 .form-state.success {
   padding: 0.9rem 1rem;
   border-radius: 0.75rem;

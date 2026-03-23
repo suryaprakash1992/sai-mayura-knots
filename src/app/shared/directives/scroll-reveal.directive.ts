@@ -28,6 +28,9 @@ export class ScrollRevealDirective implements OnInit, OnDestroy {
   @HostBinding('style.--reveal-delay')
   protected revealDelay = '0ms';
 
+  @HostBinding('style.--reveal-duration')
+  protected revealDuration = '780ms';
+
   @Input({ alias: 'scrollReveal' })
   set delay(value: number | string | null | undefined) {
     if (typeof value === 'number') {
@@ -65,8 +68,8 @@ export class ScrollRevealDirective implements OnInit, OnDestroy {
         this.observer = undefined;
       },
       {
-        rootMargin: '0px 0px 10% 0px',
-        threshold: 0.01,
+        rootMargin: '0px 0px -8% 0px',
+        threshold: 0.12,
       },
     );
 
