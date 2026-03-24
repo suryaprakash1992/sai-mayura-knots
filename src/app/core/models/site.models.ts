@@ -8,8 +8,8 @@ export interface Product {
   readonly name: string;
   readonly price: string;
   readonly image: string;
-  readonly stars: number;
-  readonly tags: readonly string[];
+  readonly description: string;
+  readonly category: string;
 }
 
 export interface Testimonial {
